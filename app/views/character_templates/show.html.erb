@@ -1,0 +1,48 @@
+<h1>
+  Character #<%= @character.id %> details
+</h1>
+
+<a href="/characters/<%= @character.id %>/edit">
+  Edit character
+</a>
+
+<hr>
+
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @character.name %>
+  </dd>
+  
+  <dt>
+    Movie
+  </dt>
+  <dd>
+    <a href="/movies/<%= @character.movie_id %>">
+      <%= Movie.find(@character.movie_id).title %>
+    </a>
+  </dd>
+
+  <dt>
+    Actor
+  </dt>
+  <dd>
+    <a href="/actors/<%= @character.actor_id %>">
+      <%= Actor.find(@character.actor_id).name %>
+    </a>
+  </dd>
+
+  
+</dl>
+
+<a href="/delete_character/<%= @character.id %>">
+  Delete character
+</a>
+
+<hr>
+
+<a href="/characters">
+  Go back
+</a>

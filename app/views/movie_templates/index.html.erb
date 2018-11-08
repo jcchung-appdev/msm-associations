@@ -29,6 +29,10 @@
     <th>
       Description
     </th>
+    
+    <th>
+      Director
+    </th>
 
     <th>
     </th>
@@ -54,6 +58,12 @@
 
     <td>
       <%= movie.description %>
+    </td>
+    
+    <td>
+      <a href="/directors/<%= movie.director_id %>">
+        <%= Director.find(movie.director_id).name %>  
+      </a>
     </td>
 
     <td>
